@@ -762,7 +762,7 @@ button:hover,
     grid-template-columns: auto;
     grid-template-rows: 1.875rem;
     justify-items: start;
-    margin-right: 2.5rem;
+    padding-left: 50px;
   }
 }
 
