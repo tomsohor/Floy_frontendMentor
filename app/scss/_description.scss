@@ -1,0 +1,84 @@
+.desc {
+  padding: rem(50) 0;
+  background-color: $db2;
+
+  .container {
+    text-align: start;
+    padding-left: rem(30);
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    margin-top: rem(40);
+    margin-bottom: rem(60);
+    transition: all 300ms ease-in-out;
+    img {
+      width: 100%;
+      @include breakpoint-up(medium) {
+        max-height: rem(400);
+      }
+
+      @include breakpoint-up(large) {
+        padding-right: rem(50);
+      }
+
+      @include breakpoint-up(xlarge) {
+        padding-right: rem(50);
+      }
+    }
+  }
+  &__text {
+    @include breakpoint-up(medium) {
+      max-width: rem(450);
+    }
+
+    @include breakpoint-up(large) {
+      padding-left: rem(60);
+      max-width: rem(550);
+
+      h2 {
+        font-size: $headerSize;
+      }
+    }
+
+    @include breakpoint-up(xlarge) {
+      h2 {
+        font-size: $headerSizeD;
+      }
+      p {
+        font-size: $textSizeD;
+      }
+    }
+    p {
+      font-weight: $basedFW-7;
+      transition: all 300ms ease-in-out;
+      @include breakpoint-up(xlarge) {
+        font-weight: $basedFW-4;
+      }
+    }
+    a {
+      color: $cyan;
+      font-size: $textSize;
+      font-weight: $basedFW-4;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $cyan;
+      transition: all 300ms ease-in-out;
+      @include breakpoint-up(xlarge) {
+        font-size: $textSizeD;
+      }
+      img {
+        transform: translateY(4px) translateX(2px);
+      }
+    }
+  }
+}

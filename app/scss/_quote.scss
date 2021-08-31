@@ -1,0 +1,98 @@
+.quote {
+  padding: rem(80) 0;
+  background-color: $db2;
+
+  .container {
+    padding: 0 rem(30);
+
+    @include breakpoint-up(medium) {
+      display: grid;
+      justify-content: center;
+    }
+    @include breakpoint-up(xlarge) {
+      padding: 0 rem(150);
+    }
+  }
+  &__img {
+    width: rem(22);
+    height: rem(16);
+    transform: translateX(25%);
+    @include breakpoint-up(large) {
+      width: rem(53);
+      height: rem(46);
+      transform: translateY(22%) translateX(-16%);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__items {
+    position: relative;
+    z-index: 1;
+    @include breakpoint-up(medium) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: rem(420);
+    }
+
+    @include breakpoint-up(large) {
+      max-width: rem(1100);
+      grid-template-columns: repeat(3, auto);
+      grid-gap: rem(40);
+    }
+    .item {
+      cursor: pointer;
+      background-color: $db1;
+      height: rem(150);
+      margin-bottom: rem(23);
+      padding: rem(25) rem(16) rem(20) rem(20);
+      transition: all 300ms ease-in-out;
+      @include breakpoint-up(medium) {
+        height: rem(200);
+        display: grid;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+        font-size: rem(11);
+        text-align: start;
+        font-weight: $basedFW-7;
+        margin-bottom: rem(18);
+
+        @include breakpoint-up(medium) {
+          font-size: rem(15);
+          font-weight: $basedFW-4;
+        }
+      }
+      &__profile {
+        display: flex;
+        img {
+          width: rem(25);
+          height: rem(25);
+          border-radius: 50%;
+        }
+        .pname {
+          max-height: rem(23);
+          margin-left: rem(8);
+          @include breakpoint-up(medium) {
+            transform: translateY(-23%);
+          }
+          .author {
+            margin-bottom: rem(0);
+            color: $whiteHover;
+          }
+          .sub {
+            margin-top: 0;
+            font-size: rem(8);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.footer {
+  background-color: $db3;
+  padding-top: rem(67);
+  @include breakpoint-up(large) {
+    display: grid;
+    justify-items: center;
+    padding-top: rem(200);
+  }
+
+  .container {
+    display: grid;
+    text-align: start;
+    padding-left: rem(34);
+
+    @include breakpoint-up(medium) {
+      justify-items: center;
+      text-align: center;
+    }
+
+    @include breakpoint-up(large) {
+      justify-items: start;
+      max-width: rem(1250);
+    }
+  }
+  &__logo {
+    margin-bottom: rem(40);
+    img {
+      width: rem(167);
+      height: rem(49);
+    }
+  }
+  &__content {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr 1fr;
+    }
+    p {
+      margin: 0;
+      margin-bottom: rem(25);
+      font-weight: $basedFW-4;
+    }
+    .location {
+      display: flex;
+      @include breakpoint-up(medium) {
+        display: grid;
+        grid-template-columns: rem(420);
+        justify-items: center;
+      }
+
+      @include breakpoint-up(large) {
+        grid-template-columns: auto auto;
+      }
+      img {
+        width: auto;
+        height: 100%;
+        margin-right: rem(25);
+        @include breakpoint-up(medium) {
+          padding-bottom: rem(15);
+          margin-right: 0;
+        }
+
+        @include breakpoint-up(large) {
+          width: rem(15);
+          height: auto;
+          margin-right: rem(25);
+        }
+      }
+      p {
+        padding-right: rem(34);
+        @include breakpoint-up(large) {
+          text-align: start;
+        }
+      }
+    }
+    .contact {
+      @include breakpoint-up(medium) {
+        display: grid;
+        grid-template-columns: rem(420);
+        justify-items: center;
+      }
+      @include breakpoint-up(large) {
+        grid-template-columns: auto;
+        grid-template-rows: rem(30);
+        justify-items: start;
+        padding-left: 50px;
+      }
+      .ph,
+      .email {
+        display: flex;
+
+        img {
+          width: auto;
+          height: 100%;
+          margin-right: rem(20);
+          @include breakpoint-up(medium) {
+            height: rem(17);
+          }
+        }
+      }
+      .ph {
+        img {
+          width: rem(15);
+        }
+      }
+    }
+    .link {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint-up(large) {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .link1,
+      .link2 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: rem(20);
+        a {
+          font-size: rem(14);
+          font-weight: $basedFW-4;
+          line-height: 2.5;
+          @include breakpoint-up(large) {
+            line-height: 1;
+            padding-bottom: rem(20);
+          }
+        }
+      }
+    }
+    .social {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto auto auto;
+      margin-top: rem(20);
+      padding-bottom: rem(30);
+      a {
+        width: rem(30);
+        height: rem(30);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $white;
+        border-radius: 50px;
+        &:not(:last-child) {
+          margin-right: rem(20);
+        }
+        img {
+          width: rem(24);
+          height: rem(18);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.header {
+  background-color: $db1;
+  width: 100%;
+  height: rem(65);
+
+  @include breakpoint-up(large) {
+    height: rem(120);
+  }
+
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    @include breakpoint-up(large) {
+      padding: rem(30);
+      align-items: center;
+    }
+  }
+  &__logo {
+    text-align: start;
+    img {
+      width: rem(74);
+      height: rem(24);
+
+      @include breakpoint-up(large) {
+        width: rem(160);
+        height: rem(45);
+      }
+    }
+  }
+  &__menu {
+    justify-self: end;
+    align-self: center;
+    a {
+      &:not(:last-child) {
+        margin-right: rem(20);
+      }
+      @include breakpoint-up(large) {
+        font-size: $textSizeD;
+
+        &:not(:last-child) {
+          margin-right: rem(58);
+        }
+      }
+    }
+  }
+}
