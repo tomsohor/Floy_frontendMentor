@@ -20,7 +20,7 @@
       position: relative;
       width: 100%;
       height: rem(450);
-      background-image: url(/images/illustration-intro.png);
+      background-image: url(images/illustration-intro.png);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
@@ -29,7 +29,7 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url(/images/bg-curvy-mobile.svg);
+      background-image: url(images/bg-curvy-mobile.svg);
       width: 100%;
       height: rem(140);
       background-repeat: no-repeat;
@@ -55,7 +55,7 @@
       transform: translateY(0%);
       background-color: $db1;
       width: 100%;
-      background-image: url(/images/bg-curvy-desktop.svg);
+      background-image: url(images/bg-curvy-desktop.svg);
       background-repeat: no-repeat;
       background-position: center top;
     }
