@@ -471,7 +471,6 @@ button:hover,
 .quote__items {
   position: relative;
   z-index: 1;
-  height: auto;
 }
 
 @media (min-width: 29.25em) {
@@ -493,7 +492,7 @@ button:hover,
 .quote__items .item {
   cursor: pointer;
   background-color: #1c2431;
-  height: 9.375rem;
+  height: auto;
   margin-bottom: 1.4375rem;
   padding: 1.5625rem 1rem 1.25rem 1.25rem;
   transition: all 300ms ease-in-out;
