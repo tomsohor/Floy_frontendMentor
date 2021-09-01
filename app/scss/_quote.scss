@@ -30,6 +30,7 @@
   &__items {
     position: relative;
     z-index: 1;
+    height: auto;
     @include breakpoint-up(medium) {
       display: grid;
       justify-content: center;
