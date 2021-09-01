@@ -149,6 +149,7 @@ button:hover,
 
 .intro .container {
   background-color: #1c2431;
+  padding-right: 0;
 }
 
 .intro__image {
