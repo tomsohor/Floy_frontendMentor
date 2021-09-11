@@ -9,7 +9,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href=".images/favicon-32x32.png"
+      href="images/favicon-32x32.png"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -182,9 +182,18 @@
           extremely generous. If you have any questions, our support team would
           be happy to help you.
         </p>
-        <form action="">
-          <input type="email" placeholder="email@example.com" />
-          <button class="btn">Get Started For Free</button>
+        <form action="/" name="accessForm" id="form" novalidate>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@example.com"
+          />
+
+          <button class="btn" type="submit" value="Submit">
+            Get Started For Free
+          </button>
+          <p class="err">please enter a valid email address</p>
         </form>
       </div>
     </section>
@@ -232,6 +241,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="app/js/script.js"></script>
 
     <!-- <footer>
       <p class="attribution">

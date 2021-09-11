@@ -56,6 +56,7 @@ p {
 
 button,
 .btn {
+  cursor: pointer;
   display: block;
   width: 13.75rem;
   height: 2.8125rem;
@@ -492,7 +493,6 @@ button:hover,
 .quote__items .item {
   cursor: pointer;
   background-color: #1c2431;
-  height: auto;
   margin-bottom: 1.4375rem;
   padding: 1.5625rem 1rem 1.25rem 1.25rem;
   transition: all 300ms ease-in-out;
@@ -630,8 +630,13 @@ button:hover,
   width: 100%;
   height: 2.9375rem;
   border: none;
+  outline: none;
   border-radius: 50px;
   padding: 0 1.6875rem;
+}
+
+.form form input:focus::placeholder {
+  color: transparent;
 }
 
 .form form .btn {
@@ -643,6 +648,28 @@ button:hover,
 @media (min-width: 64em) {
   .form form .btn {
     margin-top: 0;
+  }
+}
+
+.form p.err {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  color: red;
+  font-size: 0.625rem;
+}
+
+@media (min-width: 64em) {
+  .form p.err {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 13px;
+    left: 99px;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    color: red;
   }
 }
 

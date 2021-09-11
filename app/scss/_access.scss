@@ -46,17 +46,40 @@
       width: 100%;
       height: rem(47);
       border: none;
+      outline: none;
       border-radius: 50px;
       padding: 0 rem(27);
+      &:focus::placeholder {
+        color: transparent;
+      }
     }
+
     .btn {
       width: 100%;
       border: none;
       margin-bottom: 0;
-
+      // margin-top: rem(60);
       @include breakpoint-up(large) {
         margin-top: 0;
       }
+    }
+  }
+  p.err {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    color: red;
+    font-size: rem(10);
+    @include breakpoint-up(large) {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 13px;
+      left: 99px;
+      font-weight: $basedFW-4;
+      font-size: $textSize;
+      color: red;
     }
   }
 }
