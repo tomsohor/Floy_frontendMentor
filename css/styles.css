@@ -655,9 +655,10 @@ button:hover,
   display: none;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: relative;
   color: red;
   font-size: 0.625rem;
+  bottom: 4.5625rem;
 }
 
 @media (min-width: 64em) {

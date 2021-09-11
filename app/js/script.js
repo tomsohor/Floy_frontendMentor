@@ -4,9 +4,7 @@ const emailValidation = document.querySelector('.err');
 
 
 
-email.addEventListener('focus',()=>{
-    emailValidation.style.display = "none";
-})
+
 
 Form.addEventListener('submit',(e)=>{
     vadateEmail(email.value);
